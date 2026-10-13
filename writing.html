@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="js-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Maxime Danion</title>
+  <meta name="description" content="Maxime Danion, IT Student.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.replace('js-loading', 'js');</script>
+</head>
+<body data-page="writing">
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script>Layout.header()</script>
+
+  <main class="light page-top-lg">
+    <section class="px-base writing-head">
+      <h1 class="text-big" data-reveal>Writing</h1>
+      <p class="text-big grey" data-reveal>Notes on code, design and building things for the web.</p>
+    </section>
+    <section class="px-base">
+      <div class="cards cards-4 masonry" data-render="articles"></div>
+    </section>
+  </main>
+
+  <script>Layout.footer()</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

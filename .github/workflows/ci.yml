@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+  pull_request:
+    branches: [main]
+
+env:
+  IMAGE: ghcr.io/maxime-del/profile_website
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check JavaScript syntax
+        run: for f in assets/js/*.js; do node --check "$f"; done
+
+  build:
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      tag: ${{ steps.vars.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: vars
+        run: echo "tag=sha-${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        if: github.event_name == 'push'
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: ${{ github.event_name == 'push' }}
+          tags: |
+            ${{ env.IMAGE }}:${{ steps.vars.outputs.tag }}
+            ${{ env.IMAGE }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  # GitOps: write the new image tag into the homelab repo; Argo CD rolls it out.
+  bump-homelab:
+    needs: build
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout homelab
+        uses: actions/checkout@v4
+        with:
+          repository: maxime-del/homelab
+          token: ${{ secrets.HOMELAB_TOKEN }}
+      - name: Set image tag
+        run: |
+          f=k3s/apps/profile-website/kustomization.yaml
+          sed -i "s|^\(\s*newTag:\).*|\1 ${{ needs.build.outputs.tag }}|" "$f"
+          grep -n "newTag" "$f"
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add k3s/apps/profile-website/kustomization.yaml
+          git diff --cached --quiet && exit 0
+          git commit -m "deploy(profile-website): ${{ needs.build.outputs.tag }}"
+          git push

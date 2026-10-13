@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="js-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article — Maxime Danion</title>
+  <meta name="description" content="Maxime Danion, IT Student.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.replace('js-loading', 'js');</script>
+</head>
+<body data-page="article">
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script>Layout.header()</script>
+
+  <main class="light page-top-lg">
+    <article>
+      <header class="px-base a-head">
+        <p class="grey a-date" data-render="a-date"></p>
+        <h1 class="text-big" data-render="a-title" data-reveal></h1>
+      </header>
+      <div class="px-base a-cover" data-render="a-cover"></div>
+      <div class="px-base grid-12">
+        <div class="a-body prose" data-render="a-body"></div>
+      </div>
+    </article>
+    <section class="px-base section-gap">
+      <div class="section-head">
+        <h2 data-reveal>More writing</h2>
+        <a href="writing.html" class="cta-2 grey hide-mobile">All articles <span class="arrow"><i>→</i><i>→</i></span></a>
+      </div>
+      <div class="cards cards-4" data-render="a-more"></div>
+    </section>
+  </main>
+
+  <script>Layout.footer()</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

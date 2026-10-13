@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="js-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Maxime Danion</title>
+  <meta name="description" content="Maxime Danion, IT Student.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.replace('js-loading', 'js');</script>
+</head>
+<body data-page="projects">
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script>Layout.header()</script>
+
+  <main class="light page-top">
+    <section class="px-base">
+      <h1 class="sr-only">Projects</h1>
+      <div class="filters-wrap grid-12" data-filters>
+        <div class="filters-head">
+          <p class="grey filters-count">Selected projects <sup data-render="projects-count"></sup></p>
+          <button class="filter-group" data-filter-group="skills">Skills <sup data-group-count="skills"></sup></button>
+          <button class="filter-group" data-filter-group="types">Type <sup data-group-count="types"></sup></button>
+          <button class="filter-reset grey" data-filter-reset>Reset</button>
+        </div>
+        <div class="filters-opts">
+          <div class="opts" data-opts="skills" data-render="filter-skills"></div>
+          <div class="opts" data-opts="types" data-render="filter-types"></div>
+        </div>
+      </div>
+      <div class="cards cards-3" data-render="projects"></div>
+      <p class="empty grey" data-empty hidden>No project matches these filters.</p>
+    </section>
+  </main>
+
+  <script>Layout.footer()</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

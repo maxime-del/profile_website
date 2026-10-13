@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="js-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maxime Danion — IT Student</title>
+  <meta name="description" content="Maxime Danion, IT Student.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.replace('js-loading', 'js');</script>
+</head>
+<body data-page="home">
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script>Layout.header()</script>
+
+  <main>
+    <section class="hero" data-hero>
+      <div class="hero-zoom" data-hero-zoom data-render="hero"></div>
+      <div class="hero-mobile-sub grid-2 px-base show-mobile"><div data-reveal>IT Student</div></div>
+      <div class="hero-shade"></div>
+    </section>
+
+    <div class="light">
+      <section class="intro px-base text-big">
+        <h1 class="sr-only">Maxime Danion, IT Student</h1>
+        <p data-reveal>Independent developer <span class="blob" aria-hidden="true"></span> building fast, thoughtful websites and products. I work with people and teams who care about the details, from first sketch to production.</p>
+      </section>
+
+      <section class="px-base grid-6 block-gap">
+        <div class="labelled">
+          <span class="border-t"></span>
+          <div class="text-small label"><p>What I do</p></div>
+          <div class="labelled-text">
+            <p data-reveal>Most of the web looks the same because it is built the same way. I prefer starting from what a project actually needs: clear structure, honest typography, motion that helps rather than decorates. The result is software that feels considered and stays easy to maintain long after launch.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-base grid-12">
+        <div class="cta-col">
+          <a href="about.html" class="cta" ><span class="cta-line"><i class="l1"></i><i class="l2"></i></span><span>About</span><span class="arrow"><i>→</i><i>→</i></span></a>
+          <a href="#" class="cta" data-contact-toggle><span class="cta-line"><i class="l1"></i><i class="l2"></i></span><span>Work together</span><span class="arrow"><i>→</i><i>→</i></span></a>
+        </div>
+      </section>
+
+      <section class="px-base section-gap">
+        <div class="section-head">
+          <h2 data-reveal>Selected work</h2>
+          <a href="projects.html" class="cta-2 grey hide-mobile">All projects <span class="arrow"><i>→</i><i>→</i></span></a>
+        </div>
+        <div class="cards cards-2" data-render="featured"></div>
+        <div class="show-mobile mt-cta"><a href="projects.html" class="cta" ><span class="cta-line"><i class="l1"></i><i class="l2"></i></span><span>All projects</span><span class="arrow"><i>→</i><i>→</i></span></a></div>
+      </section>
+
+      <section class="px-base section-gap-lg">
+        <div class="section-head">
+          <h2 data-reveal>Latest writing</h2>
+          <a href="writing.html" class="cta-2 grey hide-mobile">All articles <span class="arrow"><i>→</i><i>→</i></span></a>
+        </div>
+        <div class="cards cards-4" data-render="latest"></div>
+        <div class="show-mobile mt-cta"><a href="writing.html" class="cta" ><span class="cta-line"><i class="l1"></i><i class="l2"></i></span><span>All articles</span><span class="arrow"><i>→</i><i>→</i></span></a></div>
+      </section>
+    </div>
+  </main>
+
+  <script>Layout.footer()</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

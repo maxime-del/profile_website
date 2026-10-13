@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="js-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Maxime Danion</title>
+  <meta name="description" content="Maxime Danion, IT Student.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.replace('js-loading', 'js');</script>
+</head>
+<body data-page="about">
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script>Layout.header()</script>
+
+  <main class="light page-top-lg">
+    <h1 class="sr-only">About Maxime Danion</h1>
+    <section class="px-base big-section">
+      <h2 class="text-big grey lower big-label" data-reveal>maxime</h2>
+      <div class="text-big indent">
+        <p data-reveal>I'm a developer who sits between engineering and design. I help teams turn ideas into products that are fast, accessible and pleasant to use.</p>
+      </div>
+      <div class="grid-6 block-gap about-block">
+        <div class="labelled">
+          <span class="border-t"></span>
+          <div class="text-small label"><p>About</p></div>
+          <div class="labelled-text">
+            <p data-reveal>Write a few sentences about your background here: where you studied, where you've worked, what you're curious about and what you're looking for next.</p>
+          </div>
+        </div>
+      </div>
+      <div class="media" style="aspect-ratio:16/9"><div class="media-inner" style="background:radial-gradient(120% 120% at 70% 20%, #0077ff 0%, #001433 45%, #000 100%)"></div></div>
+    </section>
+
+    <section class="px-base big-section">
+      <h2 class="text-big grey lower big-label" data-reveal>approach</h2>
+      <div class="text-big indent approach-intro">
+        <p data-reveal>Every project is different, but the way I work stays the same: understand deeply, build carefully, ship often.</p>
+      </div>
+      <div class="approach" data-approach>
+        <div class="approach-img media" data-approach-img data-render="approach-img"></div>
+        <div class="approach-steps" data-render="approach"></div>
+      </div>
+    </section>
+
+    <section class="px-base big-section skills-section" data-skills-section>
+      <div class="skills-grid">
+        <h2 class="skills-title">Tools I use</h2>
+        <ul class="skills-list text-big" data-render="skills"></ul>
+      </div>
+    </section>
+
+    <section class="px-base grid-12">
+      <div class="cta-col">
+        <a href="projects.html" class="cta" ><span class="cta-line"><i class="l1"></i><i class="l2"></i></span><span>Projects</span><span class="arrow"><i>→</i><i>→</i></span></a>
+        <a href="#" class="cta" data-contact-toggle><span class="cta-line"><i class="l1"></i><i class="l2"></i></span><span>Work together</span><span class="arrow"><i>→</i><i>→</i></span></a>
+      </div>
+    </section>
+  </main>
+
+  <script>Layout.footer()</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

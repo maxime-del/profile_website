@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="js-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project — Maxime Danion</title>
+  <meta name="description" content="Maxime Danion, IT Student.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.replace('js-loading', 'js');</script>
+</head>
+<body data-page="project">
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script>Layout.header()</script>
+
+  <main class="light page-top">
+    <section class="px-base text-big p-title">
+      <h1 data-render="p-title" data-reveal></h1>
+    </section>
+
+    <section class="px-base p-info">
+      <div class="p-info-grid">
+        <span class="border-t hide-mobile"></span>
+        <dl class="p-meta" data-render="p-meta"></dl>
+        <div class="p-text">
+          <div class="prose" data-render="p-intro" data-reveal></div>
+          <div class="accordion" data-accordion>
+            <div class="acc-content" data-acc-content><div data-render="p-sections"></div></div>
+            <div class="acc-toggle-wrap"><span class="border-t"></span>
+              <button class="acc-toggle" data-acc-toggle>
+                <span class="swap"><span class="swap-a">See more</span><span class="swap-b">Close</span></span>
+                <span class="acc-arrow">↓</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-base gallery" data-render="p-gallery"></section>
+
+    <section class="px-base credits accordion" data-accordion>
+      <div class="credits-grid"><span class="border-t"></span>
+        <div class="hide-mobile">Credits</div>
+        <div>
+          <button class="acc-toggle" data-acc-toggle>
+            <span class="swap"><span class="swap-a">See all credits</span><span class="swap-b">Close</span></span>
+            <span class="acc-arrow">↓</span>
+          </button>
+          <div class="acc-content" data-acc-content><div class="credits-list" data-render="p-credits"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-base next" data-render="p-next"></section>
+  </main>
+
+  <script>Layout.footer()</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
