@@ -6,5 +6,6 @@ COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --chown=nginx:nginx *.html /usr/share/nginx/html/
 COPY --chown=nginx:nginx assets /usr/share/nginx/html/assets
 COPY --chown=nginx:nginx images /usr/share/nginx/html/images
+COPY --chown=nginx:nginx CV /usr/share/nginx/html/CV
 
 EXPOSE 8080

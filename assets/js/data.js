@@ -10,10 +10,10 @@ window.SITE = {
   fullName: 'Maxime Danion',
   tagline: 'IT Student',
   email: 'danion.maxime12@gmail.com',
-  location: ['City', 'Country'],
+  location: ['Paris', 'France'],
   social: [
-    { label: 'GitHub', href: 'https://github.com/' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
+    { label: 'GitHub', href: 'https://github.com/maxime-del' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/maximedanion' },
   ],
 
   // Home-page slideshow (alternates between these). Spaces in file names must be written as %20.
@@ -125,5 +125,5 @@ window.SITE = {
     { title: 'Iterate', body: 'Measuring, listening again, and improving. Good products are never really finished.', cover: 'conic-gradient(from 90deg, #ff4b14, #0077ff, #ff4b14)' },
   ],
 
-  skills: ['JavaScript', 'TypeScript', 'React', 'Node.js', 'Python', 'SQL', 'CSS', 'GSAP', 'Figma', 'Git'],
+  skills: ['Linux', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Helm', 'Proxmox', 'pfSense', 'Suricata', 'SIEM', 'PKI', 'Tailscale', 'Python', 'Go', 'C', 'Git'],
 };
