@@ -356,6 +356,11 @@ html.js .cta:hover .cta-line .l1 { --c: 110%; }
 .big-label { margin-bottom: var(--gutter); }
 @media (min-width: 64rem) { .big-label { margin-bottom: var(--gap-medium); } }
 .about-block { margin-top: calc(var(--s) * 20); }
+.cv-block { position: relative; margin-top: calc(var(--s) * 20); padding-top: var(--gutter); }
+.cv-block .label { margin-bottom: var(--gutter); }
+.cv { display: block; max-width: 30rem; border: 1px solid rgba(0, 0, 0, .1); background: #fff; overflow: hidden; }
+.cv img { display: block; width: 100%; height: auto; transition: transform 1.2s var(--ease-out); }
+.cv:hover img { transform: scale(1.02); }
 .approach-intro { margin-bottom: calc(var(--s) * 25); }
 .approach { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: var(--gutter); align-items: start; }
 .approach-img { grid-column: 3; grid-row: 1; aspect-ratio: 3/4; position: sticky; top: 3rem; }
