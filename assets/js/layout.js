@@ -26,6 +26,8 @@
                   <li><a href="projects.html?skill=Infrastructure" class="link-u">Infrastructure<span class="link-u-line"></span></a></li>
                   <li><a href="projects.html?skill=Security" class="link-u">Security<span class="link-u-line"></span></a></li>
                   <li><a href="projects.html?skill=IaC" class="link-u">IaC<span class="link-u-line"></span></a></li>
+                  <li><a href="projects.html?skill=Kubernetes" class="link-u">Kubernetes<span class="link-u-line"></span></a></li>
+                  <li><a href="projects.html?skill=Networking" class="link-u">Networking<span class="link-u-line"></span></a></li>
                 </ul>
               </li>
               <li>${navLink('writing.html', 'Writing', 'writing')}</li>
