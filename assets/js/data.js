@@ -29,7 +29,7 @@ window.SITE = {
     {
       slug: 'homelab', title: 'Homelab', tagline: 'A GitOps Kubernetes homelab, fully provisioned as code',
       ratio: '3/2', skills: ['Infrastructure', 'Kubernetes', 'IaC', 'Security'], type: ['Self-hosted'], year: 2026, featured: true,
-      cover: 'images/hero/server-aisle.jpg',
+      cover: 'images/projects/homelab-arch.jpg',
       intro: 'A 3-node K3s cluster virtualized on Proxmox and provisioned entirely as code with Terraform and Ansible. Everything is deployed through GitOps and reconciled automatically — from ingress and SSO to secrets and observability.',
       sections: [
         { title: 'Cluster & provisioning', body: 'Three K3s nodes on Proxmox, provisioned with Terraform and configured with Ansible. Raw manifests are managed with Kustomize and complex components with Helm.' },
@@ -58,7 +58,7 @@ window.SITE = {
     {
       slug: 'ad-pentest', title: 'Active Directory Pentest', tagline: 'Black-box offensive assessment of an AD domain',
       ratio: '3/4', skills: ['Security'], type: ['Pentest'], year: 2025, featured: true,
-      cover: 'images/projects/cybersecurity.jpg',
+      cover: 'images/projects/bloodhound.jpg',
       intro: 'A black-box offensive assessment of a Windows Active Directory domain, from reconnaissance to full domain compromise, delivered with a complete remediation plan.',
       sections: [
         { title: 'Reconnaissance', body: 'Mapped 2,500+ accounts with BloodHound CE using LDAP and Cypher queries to identify attack paths to Domain Admins.' },
@@ -93,7 +93,7 @@ window.SITE = {
     {
       slug: '42sh', title: '42sh', tagline: 'A POSIX-compliant UNIX shell in C',
       ratio: '1/1', skills: ['Systems'], type: ['Systems'], year: 2025,
-      cover: 'images/hero/microcontroller.jpg',
+      cover: 'images/projects/shell.jpg',
       intro: 'A POSIX-compliant UNIX command interpreter written in C: simple and complex commands, process management, redirections, pipelines, control structures, variables and built-ins.',
       sections: [
         { title: 'Parsing & execution', body: 'A lexer, parser and executor following the POSIX specification, running shell grammar including if/while/for and built-ins such as cd, export and echo.' },
