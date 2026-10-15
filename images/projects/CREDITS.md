@@ -7,7 +7,7 @@ identify the tools used in each project.
 
 | File | Used for | Source | Notes |
 |---|---|---|---|
-| homelab-arch.jpg | Homelab | Architecture diagram built with [Mermaid](https://mermaid.js.org); tool logos from the Iconify `logos` and `simple-icons` sets | Own diagram; logos © their owners |
+| homelab-arch.jpg | Homelab | Architecture diagram authored by me, rendered with [Mermaid](https://mermaid.js.org) | Own work |
 | bloodhound.jpg | Active Directory Pentest | Official [BloodHound Community Edition](https://github.com/SpecterOps/BloodHound) logo on a plain background | Logo © SpecterOps, used nominatively |
 | shell.jpg | 42sh | Terminal mockup, generated for this site | Own work |
 | sudoku.jpg | OCR Sudoku Solver | Sudoku grid, generated for this site (Pillow) | Own work |
